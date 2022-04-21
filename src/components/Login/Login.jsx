@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { setToken } from '../../helpers/authHelper'
 import { Button, Card, Grid, TextField, Typography } from '@mui/material'
 import FaceIcon from '@mui/icons-material/Face'
