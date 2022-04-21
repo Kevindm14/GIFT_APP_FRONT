@@ -32,7 +32,7 @@ export const Login = () => {
     const dataRes = await res.json()
     setToken(dataRes.token)
 
-    navigate(from, { replace: true });
+    navigate('/', { replace: true });
   }
 
   return (
