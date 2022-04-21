@@ -19,7 +19,7 @@ export const Users = () => {
 
   const getUsers = async () => {
     // eslint-disable-next-line no-undef
-    const res = await fetch('http://localhost:3000/users', {
+    const res = await fetch('https://livegift-app.herokuapp.com/users', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${getToken()}`

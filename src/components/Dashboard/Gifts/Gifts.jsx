@@ -19,7 +19,7 @@ export const Gifts = () => {
 
   const getGifts = async () => {
     // eslint-disable-next-line no-undef
-    const res = await fetch('http://localhost:3000/gifts', {
+    const res = await fetch('https://livegift-app.herokuapp.com/gifts', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${getToken()}`

@@ -24,7 +24,7 @@ export const SignUp = () => {
     }
 
     // eslint-disable-next-line no-undef
-    const res = await fetch('http://localhost:3000/auth/signup', options)
+    const res = await fetch('https://livegift-app.herokuapp.com/auth/signup', options)
     const dataRes = await res.json()
     setToken(dataRes.token)
 

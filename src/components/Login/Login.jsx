@@ -24,7 +24,7 @@ export const Login = () => {
     }
 
     // eslint-disable-next-line no-undef
-    const res = await fetch('http://localhost:3000/auth/login', options)
+    const res = await fetch('https://livegift-app.herokuapp.com/auth/login', options)
     const dataRes = await res.json()
     setToken(dataRes.token)
 
