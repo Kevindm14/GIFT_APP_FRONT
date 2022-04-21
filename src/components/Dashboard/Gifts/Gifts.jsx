@@ -12,6 +12,7 @@ import {
 } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../../../config/baseURL'
 import { getToken } from '../../../helpers/authHelper'
 
 export const Gifts = () => {
@@ -19,7 +20,7 @@ export const Gifts = () => {
 
   const getGifts = async () => {
     // eslint-disable-next-line no-undef
-    const res = await fetch('https://livegift-app.herokuapp.com/gifts', {
+    const res = await fetch(`${BASE_URL}/gifts`, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${getToken()}`

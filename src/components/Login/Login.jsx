@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import { setToken } from '../../helpers/authHelper'
 import { Button, Card, Grid, TextField, Typography } from '@mui/material'
 import FaceIcon from '@mui/icons-material/Face'
+import { BASE_URL } from '../../config/baseURL'
+
+console.log(BASE_URL)
 
 const schema = yup.object({
   email: yup.string().required().email(),
@@ -12,6 +15,7 @@ const schema = yup.object({
 })
 
 export const Login = () => {
+  let navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   })
@@ -24,11 +28,11 @@ export const Login = () => {
     }
 
     // eslint-disable-next-line no-undef
-    const res = await fetch('https://livegift-app.herokuapp.com/auth/login', options)
+    const res = await fetch(`${BASE_URL}/auth/login`, options)
     const dataRes = await res.json()
     setToken(dataRes.token)
 
-    window.location = '/'
+    navigate(from, { replace: true });
   }
 
   return (

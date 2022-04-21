@@ -13,13 +13,14 @@ import {
 import { useState, useEffect } from 'react'
 import { getToken } from '../../../helpers/authHelper'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../../../config/baseURL'
 
 export const Users = () => {
   const [listUsers, setUsers] = useState([])
 
   const getUsers = async () => {
     // eslint-disable-next-line no-undef
-    const res = await fetch('https://livegift-app.herokuapp.com/users', {
+    const res = await fetch(`${BASE_URL}/users`, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${getToken()}`

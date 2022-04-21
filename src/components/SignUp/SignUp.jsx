@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { Button, Card, Grid, TextField, Typography } from '@mui/material'
 import FaceIcon from '@mui/icons-material/Face'
 import { setToken } from '../../helpers/authHelper'
+import { BASE_URL } from '../../config/baseURL'
 
 const schema = yup.object({
   email: yup.string().required().email(),
@@ -24,7 +25,7 @@ export const SignUp = () => {
     }
 
     // eslint-disable-next-line no-undef
-    const res = await fetch('https://livegift-app.herokuapp.com/auth/signup', options)
+    const res = await fetch(`${BASE_URL}/auth/signup`, options)
     const dataRes = await res.json()
     setToken(dataRes.token)
 
