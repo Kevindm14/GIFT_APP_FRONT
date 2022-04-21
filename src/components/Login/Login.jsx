@@ -28,7 +28,7 @@ export const Login = () => {
     const dataRes = await res.json()
     setToken(dataRes.token)
 
-    window.location = '/dashboard'
+    window.location = '/'
   }
 
   return (
