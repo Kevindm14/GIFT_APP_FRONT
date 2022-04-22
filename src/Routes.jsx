@@ -23,7 +23,7 @@ function RoutesApp () {
         <Route path='/users/:id' element={<PrivateRoute component={<Dashboard component={<DetailUser />} />} />} />
         <Route path='/gifts' element={<PrivateRoute component={<Dashboard component={<Gifts />} />} />} />
         <Route path='/gifts/:id' element={<PrivateRoute component={<Dashboard component={<DetailGift />} />} />} />
-        <Route path='/gifts/show/:gift_id/view' element={<PublicRoute component={<Videoview />} />} />
+        <Route path='/:gift_id/' element={<PublicRoute component={<Videoview />} />} />
         <Route path='/events' element={<PrivateRoute component={<Dashboard component={<Events />} />} />} />
         <Route path='*' element={<>Not Found</>} />
       </Routes>

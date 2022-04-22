@@ -8,7 +8,7 @@ export const Videoview = () => {
 
   const showVideo = async () => {
     // eslint-disable-next-line no-undef
-    const res = await fetch(`${BASE_URL}/gifts/show/${gift_id}/view`, {
+    const res = await fetch(`${BASE_URL}/gifts/${gift_id}/`, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${getToken()}`
