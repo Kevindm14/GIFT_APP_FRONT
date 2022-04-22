@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     fontFamily: 'Gothic A1, sans-serif'
   },
   sidebar: {
-    width: '20rem',
+    width: '15rem',
     display: 'flex',
     flexDirection: 'column',
     height: '100vh',
@@ -48,7 +48,7 @@ const useStyles = makeStyles({
   content: {
     background: 'white',
     width: '100%',
-    padding: '3rem'
+    padding: '2rem 1rem'
   },
   listItemLink: {
     display: 'flex',

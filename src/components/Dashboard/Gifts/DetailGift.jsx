@@ -16,7 +16,7 @@ const DetailGift = () => {
     <>
       <Grid container>
         <Typography sx={{ fontSize: 22, fontWeight: 'bold', textAlign: 'center' }} color='GrayText' gutterBottom>
-          {id}
+          <h1>{}</h1>
         </Typography>
       </Grid>
     </>
