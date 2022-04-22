@@ -9,6 +9,7 @@ import { Login } from './components/Login/Login.jsx'
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute.jsx'
 import { PublicRoute } from './components/PublicRoute/PublicRoute.jsx'
 import { SignUp } from './components/SignUp/SignUp.jsx'
+import { Videoview } from './components/VideoView.jsx'
 
 function RoutesApp () {
   return (
@@ -22,6 +23,7 @@ function RoutesApp () {
         <Route path='/users/:id' element={<PrivateRoute component={<Dashboard component={<DetailUser />} />} />} />
         <Route path='/gifts' element={<PrivateRoute component={<Dashboard component={<Gifts />} />} />} />
         <Route path='/gifts/:id' element={<PrivateRoute component={<Dashboard component={<DetailGift />} />} />} />
+        <Route path='/gifts/show/:gift_id/view' element={<PublicRoute component={<Videoview />} />} />
         <Route path='/events' element={<PrivateRoute component={<Dashboard component={<Events />} />} />} />
         <Route path='*' element={<>Not Found</>} />
       </Routes>

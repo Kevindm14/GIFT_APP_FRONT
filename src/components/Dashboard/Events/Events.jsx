@@ -7,7 +7,6 @@ import {
   TableRow,
   TableCell,
   TableBody,
-  Button,
   Paper
 } from '@mui/material'
 import { useEffect, useState } from 'react'
@@ -30,6 +29,19 @@ export const Events = () => {
     const data = await res.json()
     setEvents(data.events)
   }
+
+  // const deleteEvent = async (eventID) => {
+  //   // eslint-disable-next-line no-undef
+  //   const res = await fetch(`${BASE_URL}/events/${eventID}`, {
+  //     method: 'DELETE',
+  //     headers: {
+  //       Authorization: `Bearer ${getToken()}`
+  //     }
+  //   })
+
+  //   const data = await res.json()
+  //   setEvents(data.events)
+  // }
 
   useEffect(() => {
     getEvents()
@@ -55,7 +67,6 @@ export const Events = () => {
                       <TableCell align='right'>Descripcion</TableCell>
                       <TableCell align='right'>Creado</TableCell>
                       <TableCell align='right'>Actualizado</TableCell>
-                      <TableCell align='right'>Acciones</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -76,9 +87,6 @@ export const Events = () => {
                           <TableCell align='right'>{row.description}</TableCell>
                           <TableCell align='right'>{row.createdAt}</TableCell>
                           <TableCell align='right'>{row.updatedAt}</TableCell>
-                          <TableCell align='right'>
-                            <Button variant='contained' sx={{ marginLeft: '1em' }} color='error' size='small'>Borrar</Button>
-                          </TableCell>
                         </TableRow>
                       ))
                     }

@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { setToken } from '../../helpers/authHelper'
 import { Button, Card, Grid, TextField, Typography } from '@mui/material'
 import FaceIcon from '@mui/icons-material/Face'
@@ -15,7 +15,6 @@ const schema = yup.object({
 })
 
 export const Login = () => {
-  let navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   })
@@ -32,7 +31,7 @@ export const Login = () => {
     const dataRes = await res.json()
     setToken(dataRes.token)
 
-    navigate('/', { replace: true });
+    window.location = '/'
   }
 
   return (

@@ -7,7 +7,6 @@ import {
   TableRow,
   TableCell,
   TableBody,
-  Button,
   Paper
 } from '@mui/material'
 import { useEffect, useState } from 'react'
@@ -54,7 +53,6 @@ export const Gifts = () => {
                       <TableCell align='right'>Titulo</TableCell>
                       <TableCell align='right'>Creado</TableCell>
                       <TableCell align='right'>Actualizado</TableCell>
-                      <TableCell align='right'>Acciones</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -74,9 +72,6 @@ export const Gifts = () => {
                           </TableCell>
                           <TableCell align='right'>{row.createdAt}</TableCell>
                           <TableCell align='right'>{row.updatedAt}</TableCell>
-                          <TableCell align='right'>
-                            <Button variant='contained' sx={{ marginLeft: '1em' }} color='error' size='small'>Borrar</Button>
-                          </TableCell>
                         </TableRow>
                       ))
                     }
